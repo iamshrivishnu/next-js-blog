@@ -1,16 +1,28 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;700&family=Oxygen:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    html,body{
+        @apply dark:text-white dark:bg-black;
+    }
+    
+    .portableText ol {
+        @apply list-decimal list-inside mt-5;
+    }
+    
+    .portableText ol li, .portableText ul li {
+        @apply mt-3;
+    }
+    
+    .portableText ul {
+        @apply list-disc list-inside mt-5;
+    }
+    
+    .portableText code {
+        @apply bg-gray-300 dark:bg-gray-700 text-sm font-firaSans leading-relaxed py-1 px-2;
+    }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
