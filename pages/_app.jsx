@@ -13,10 +13,10 @@ const MyApp = ({ Component, pageProps }) => {
         </Link>
         <nav className="flex flex-row justify-end flex-grow">
           <Link href="/article" passHref>
-            <a className="font-oxygen text-lg p-5">{"Article"}</a>
+            <a className="font-oxygen text-lg p-5">{"Articles"}</a>
           </Link>
           <Link href="/author" passHref>
-            <a className="font-oxygen text-lg p-5">{"Author"}</a>
+            <a className="font-oxygen text-lg p-5">{"Authors"}</a>
           </Link>
         </nav>
       </header>
