@@ -3,7 +3,6 @@ import Article from "containers/Article";
 import Fallback from "containers/Fallback";
 
 const articleQuery = `*[_type == "article" && slug.current == $slug]{
-      _id,
       title,
       author->{
         name,
@@ -11,9 +10,7 @@ const articleQuery = `*[_type == "article" && slug.current == $slug]{
         authorImage
       },
       bannerImage,
-      body,
-      likes,
-      dislikes,
+      body
     }[0]`;
 
 export async function getStaticPaths() {

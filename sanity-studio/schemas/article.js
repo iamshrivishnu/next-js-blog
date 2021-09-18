@@ -40,21 +40,7 @@ const articleSchema = {
         of: [{ type: "block" }],
         validation: (Rule) => [Rule.required().error('Body cannot be empty')]
       },
-      {
-        name: "likes",
-        title: "Likes",
-        type: "number",
-      },
-      {
-        name: "dislikes",
-        title: "Dislikes",
-        type: "number",
-      },
-    ],
-    initialValue: {
-      likes: 0,
-      dislikes: 0,
-    },
+    ]
   };
   
   export default articleSchema

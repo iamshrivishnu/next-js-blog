@@ -4,10 +4,9 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { PortableText, urlFor } from "lib/sanity";
-import Reaction from "components/Reaction";
 
 const Article = ({
-  article: { _id, title, author, likes, dislikes, bannerImage, body },
+  article: { title, author, bannerImage, body },
 }) => (
   <div>
     <Head>
@@ -39,9 +38,6 @@ const Article = ({
             </Link>
           </div>
         </div>
-        <div className="flex flex-col justify-evenly">
-          <Reaction id={_id} likes={likes} dislikes={dislikes} />
-        </div>
       </div>
       <div className="portableText mt-3 md:mt-0 md:w-4/5 text-lg">
         <div className="w-auto h-40 md:h-96 relative my-3">
@@ -60,7 +56,6 @@ const Article = ({
 
 Article.propTypes = {
   article: PropTypes.shape({
-    _id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     author: PropTypes.shape({
       authorImage: PropTypes.object.isRequired,
@@ -71,8 +66,6 @@ Article.propTypes = {
     }).isRequired,
     bannerImage: PropTypes.object.isRequired,
     body: PropTypes.array.isRequired,
-    likes: PropTypes.number.isRequired,
-    dislikes: PropTypes.number.isRequired,
   }).isRequired,
 };
 
