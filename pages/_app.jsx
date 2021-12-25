@@ -5,7 +5,7 @@ import "styles/globals.css";
 const MyApp = ({ Component, pageProps }) => {
   return (
     <>
-      <header className="h-18 bg-opacity-40 bg-gray-800 dark:bg-gray-200 flex flex-row">
+      <header className="h-18 bg-opacity-40 bg-gray-900 dark:bg-gray-500 flex flex-row">
         <Link href="/" passHref>
           <a className="font-oxygen text-xl font-bold p-5 flex-grow-0">
             {"Tech Blog"}
