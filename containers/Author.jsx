@@ -22,7 +22,7 @@ const Author = ({ author: { name, authorImage, details } }) => (
         />
       </div>
       <div className="portableText font-oxygen md:w-2/3 md:px-6 mt-3 md:mt-0">
-        <PortableText blocks={details} />
+        <PortableText value={details} />
       </div>
     </div>
   </>
