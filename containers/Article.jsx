@@ -48,7 +48,7 @@ const Article = ({
             objectFit="scale-down"
           />
         </div>
-        <PortableText blocks={body} />
+        <PortableText value={body} />
       </div>
     </div>
   </div>
