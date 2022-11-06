@@ -19,7 +19,10 @@ const Author = ({ author: { name, authorImage, details } }) => (
           alt={name}
           width={500}
           height={500}
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       </div>
       <div className="portableText font-oxygen md:w-2/3 md:px-6 mt-3 md:mt-0">
         <PortableText value={details} />
