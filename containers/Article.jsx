@@ -25,16 +25,19 @@ const Article = ({
               width={150}
               height={150}
               className="rounded-full"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </div>
           <div className="pl-3 flex flex-col justify-around">
             <h2 className="text-left font-oxygen text-lg font-bold">
               {author.name}
             </h2>
-            <Link href={`/author/${author.slug.current}`}>
-              <a className="text-blue-500 hover:underline font-firaSans">
-                {"View Profile"}
-              </a>
+            <Link
+              href={`/author/${author.slug.current}`}
+              className="text-blue-500 hover:underline font-firaSans">
+              {"View Profile"}
             </Link>
           </div>
         </div>
@@ -44,9 +47,11 @@ const Article = ({
           <Image
             src={urlFor(bannerImage).url()}
             alt={title}
-            layout="fill"
-            objectFit="scale-down"
-          />
+            fill
+            sizes="100vw"
+            style={{
+              objectFit: "scale-down"
+            }} />
         </div>
         <PortableText value={body} />
       </div>

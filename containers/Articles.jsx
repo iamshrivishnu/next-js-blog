@@ -16,15 +16,17 @@ const Articles = ({ articles }) => (
     <div className="flex flex-col flex-wrap justify-around p-3">
       {articles.map(
         ({ _id, title, author, bannerImage, slug }) => (
-          <Link key={_id} href={`/article/${slug.current}`} passHref>
+          <Link key={_id} href={`/article/${slug.current}`}>
             <div className="p-5 border-black dark:border-white border rounded w-full md:w-1/4">
               <div className="w-full h-36 relative my-3">
                 <Image
                   src={urlFor(bannerImage).url()}
                   alt={title}
-                  layout="fill"
-                  objectFit="scale-down"
-                />
+                  fill
+                  sizes="100vw"
+                  style={{
+                    objectFit: "scale-down"
+                  }} />
               </div>
               <h2 className="text-left font-oxygen text-2xl font-bold mt-3 mx-4">
                 {title}

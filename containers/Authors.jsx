@@ -26,14 +26,17 @@ const Authors = ({ authors }) => (
               width={150}
               height={150}
               className="rounded-full"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </div>
           <div className="pl-3 flex flex-col justify-around">
             <h2 className="text-left font-oxygen text-lg font-bold">{name}</h2>
-            <Link href={`/author/${slug.current}`}>
-              <a className="text-blue-500 hover:underline font-firaSans">
-                {"View Profile"}
-              </a>
+            <Link
+              href={`/author/${slug.current}`}
+              className="text-blue-500 hover:underline font-firaSans">
+              {"View Profile"}
             </Link>
           </div>
         </div>
