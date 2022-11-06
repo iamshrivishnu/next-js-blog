@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { Analytics } from '@vercel/analytics/react';
 import "styles/globals.css";
 
 const MyApp = ({ Component, pageProps }) => {
@@ -22,6 +23,7 @@ const MyApp = ({ Component, pageProps }) => {
     <main className="container mx-auto px-4">
       <Component {...pageProps} />
     </main>
+    <Analytics />
   </>;
 };
 export default MyApp;
