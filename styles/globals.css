@@ -5,9 +5,9 @@
 @tailwind utilities;
 
 @layer components{
-    html,body{
+    /* html,body{
         @apply dark:text-white dark:bg-black;
-    }
+    } */
     
     .portableText ol {
         @apply list-decimal list-inside mt-5;
