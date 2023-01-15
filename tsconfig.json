@@ -6,6 +6,7 @@
       "dom.iterable",
       "esnext"
     ],
+    "baseUrl": ".",
     "allowJs": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

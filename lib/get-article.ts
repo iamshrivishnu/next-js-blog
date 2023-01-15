@@ -22,7 +22,7 @@ export interface ArticleCard {
 
 }
 
-export async function getArticleCards(count: number): Promise<ArticleCard[]> {
+export async function getArticleCards(count?: number): Promise<ArticleCard[]> {
     let query = `*[_type == "article" && defined(slug.current)]{
         _id,
         title,

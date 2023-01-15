@@ -1,20 +1,22 @@
 import React from "react";
 import Image, { ImageLoaderProps } from "next/image";
-import { urlFor } from "lib/sanity-helper";
 import { getImageDimensions } from '@sanity/asset-utils'
+import { getImageObject } from "lib/sanity-helper";
 
 interface PictureProps {
     src: string;
     alt: string;
+    className?: string;
 }
 
 function customLoader({ src, width, quality }: ImageLoaderProps): string {
-    return urlFor(JSON.parse(src)).width(width).quality(quality).auto('format').url();
+    return  getImageObject(JSON.parse(src)).width(width).quality(quality).auto('format').url();
 }
 
-function Picture({ src, alt }: PictureProps) {
+function Picture({ src, alt, className }: PictureProps) {
     const { width, height } = getImageDimensions(src)
     return (<Image
+        className={className}
         loader={customLoader}
         src={src}
         alt={alt}
